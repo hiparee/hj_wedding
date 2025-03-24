@@ -805,10 +805,10 @@ W웨딩 센텀사이언스파크 웨딩홀 1F 더라움홀">
 
 <body style="text-align: center;">
   <!-- 입장 음악재생 우회 -->
-  <!-- <div id="entrance">
+  <div id="entrance">
     <button id="entrance-btn" style="border:none;background: none;position: fixed;top: 0;left: 0;right: 0;bottom:0;z-index: 1000;">
     </button>
-  </div> -->
+  </div>
 
 
   <!-- 오디오 태그 (자동재생, 음소거 기본 설정) -->
@@ -1658,32 +1658,32 @@ W웨딩 센텀사이언스파크 웨딩홀 1F 더라움홀">
             var musicNotification = document.getElementById("music-notification");
 
             // 방법 1: 입장 버튼 클릭 시 음악 재생
-            // entranceBtn.addEventListener("mousedown", function () {
-            //   entrance.style.display = "none";
+            entranceBtn.addEventListener("mousedown", function () {
+              entrance.style.display = "none";
 
-            //   // 음악 재생 시도
-            //   audio.play().then(() => {
-            //     audioIcon.src = "./images/pause_btn.svg"; // 정지 아이콘으로 변경
-            //   }).catch(() => {
-            //     console.log("사용자 상호작용 후에도 자동 재생 실패");
+              // 음악 재생 시도
+              audio.play().then(() => {
+                audioIcon.src = "./images/pause_btn.svg"; // 정지 아이콘으로 변경
+              }).catch(() => {
+                console.log("사용자 상호작용 후에도 자동 재생 실패");
 
-            //     // 방법 2: 음소거로 자동 재생 시도
-            //     audio.muted = true;
-            //     audio.play().then(() => {
-            //       // 음소거 상태로 재생 성공 시 알림 표시
-            //       musicNotification.style.display = "block";
-            //       musicNotification.style.opacity = "1";
+                // 방법 2: 음소거로 자동 재생 시도
+                audio.muted = true;
+                audio.play().then(() => {
+                  // 음소거 상태로 재생 성공 시 알림 표시
+                  musicNotification.style.display = "block";
+                  musicNotification.style.opacity = "1";
 
-            //       // 5초 후 알림 숨기기
-            //       setTimeout(() => {
-            //         musicNotification.style.opacity = "0";
-            //         setTimeout(() => {
-            //           musicNotification.style.display = "none";
-            //         }, 500);
-            //       }, 5000);
-            //     });
-            //   });
-            // });
+                  // 5초 후 알림 숨기기
+                  setTimeout(() => {
+                    musicNotification.style.opacity = "0";
+                    setTimeout(() => {
+                      musicNotification.style.display = "none";
+                    }, 500);
+                  }, 5000);
+                });
+              });
+            });
 
             // 음악 버튼 클릭 시 재생/정지 전환
             audioBtn.addEventListener("click", function () {
