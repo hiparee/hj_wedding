@@ -611,8 +611,9 @@
 
     /* 연락처 모달 */
     #contact-modal .modal-content {
+      width: 70%;
       padding: 30px;
-      max-width: 350px;
+      max-width: 450px;
     }
 
     .modal-title {
@@ -640,7 +641,7 @@
     }
 
     .person-name {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #555;
     }
 
@@ -1075,73 +1076,75 @@
         </div>
         <h3 class="modal-title">연락처</h3>
         <div class="contact-list">
+          <p>신랑측</p>
           <div class="contact-person">
-            <div class="person-name">신랑</div>
+            <div class="person-name">신랑 윤종인</div>
             <div class="contact-actions">
-              <div class="contact-action call-action" data-tel="01012345678">
+              <div class="contact-action call-action" data-tel="01050052147">
                 <i class="fa-solid fa-phone"></i>
               </div>
-              <div class="contact-action sms-action" data-tel="01012345678">
+              <div class="contact-action sms-action" data-tel="01050052147">
                 <i class="fa-solid fa-envelope"></i>
               </div>
             </div>
           </div>
 
           <div class="contact-person">
-            <div class="person-name">신랑 아버지</div>
+            <div class="person-name">신랑 아버지 윤태원</div>
             <div class="contact-actions">
-              <div class="contact-action call-action" data-tel="01023456789">
+              <div class="contact-action call-action" data-tel="01056452147">
                 <i class="fa-solid fa-phone"></i>
               </div>
-              <div class="contact-action sms-action" data-tel="01023456789">
+              <div class="contact-action sms-action" data-tel="01056452147">
                 <i class="fa-solid fa-envelope"></i>
               </div>
             </div>
           </div>
 
           <div class="contact-person">
-            <div class="person-name">신랑 어머니</div>
+            <div class="person-name">신랑 어머니 김은주</div>
             <div class="contact-actions">
-              <div class="contact-action call-action" data-tel="01034567890">
+              <div class="contact-action call-action" data-tel="01026244890">
                 <i class="fa-solid fa-phone"></i>
               </div>
-              <div class="contact-action sms-action" data-tel="01034567890">
+              <div class="contact-action sms-action" data-tel="01026244890">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+            </div>
+          </div>
+
+          <p>신부측</p>
+          <div class="contact-person">
+            <div class="person-name">신부 이현정</div>
+            <div class="contact-actions">
+              <div class="contact-action call-action" data-tel="01026750648">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-action sms-action" data-tel="01026750648">
                 <i class="fa-solid fa-envelope"></i>
               </div>
             </div>
           </div>
 
           <div class="contact-person">
-            <div class="person-name">신부</div>
+            <div class="person-name">신부 아버지 이화수</div>
             <div class="contact-actions">
-              <div class="contact-action call-action" data-tel="01045678901">
+              <div class="contact-action call-action" data-tel="01067431648">
                 <i class="fa-solid fa-phone"></i>
               </div>
-              <div class="contact-action sms-action" data-tel="01045678901">
+              <div class="contact-action sms-action" data-tel="01067431648">
                 <i class="fa-solid fa-envelope"></i>
               </div>
             </div>
           </div>
 
           <div class="contact-person">
-            <div class="person-name">신부 아버지</div>
+            <div class="person-name">신부 어머니 신남연</div>
             <div class="contact-actions">
-              <div class="contact-action call-action" data-tel="01056789012">
+              <div class="contact-action call-action" data-tel="01045510648">
                 <i class="fa-solid fa-phone"></i>
               </div>
-              <div class="contact-action sms-action" data-tel="01056789012">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-person">
-            <div class="person-name">신부 어머니</div>
-            <div class="contact-actions">
-              <div class="contact-action call-action" data-tel="01067890123">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-              <div class="contact-action sms-action" data-tel="01067890123">
+              <div class="contact-action sms-action" data-tel="01045510648">
                 <i class="fa-solid fa-envelope"></i>
               </div>
             </div>
@@ -1203,36 +1206,31 @@
           container: '#kakaotalk-sharing-btn',
           objectType: 'feed',
           content: {
-            title: '딸기 치즈 케익',
-            description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+            title: '종인 ♡ 현정 결혼합니다',
+            description: '2025-05-11 일요일 오후 1시\r\n모바일청첩장',
             imageUrl:
-              'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+              'https://hiparee.github.io/hj_wedding/images/07.jpg',
             link: {
               // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
-              mobileWebUrl: 'https://developers.kakao.com',
-              webUrl: 'https://developers.kakao.com',
+              mobileWebUrl: 'https://hiparee.github.io/hj_wedding',
+              webUrl: 'https://hiparee.github.io/hj_wedding',
             },
-          },
-          social: {
-            likeCount: 286,
-            commentCount: 45,
-            sharedCount: 845,
           },
           buttons: [
             {
-              title: '웹으로 보기',
+              title: '자세히 보기',
               link: {
-                mobileWebUrl: 'https://developers.kakao.com',
-                webUrl: 'https://developers.kakao.com',
+                mobileWebUrl: 'https://hiparee.github.io/hj_wedding',
+                webUrl: 'https://hiparee.github.io/hj_wedding',
               },
             },
-            {
-              title: '앱으로 보기',
-              link: {
-                mobileWebUrl: 'https://developers.kakao.com',
-                webUrl: 'https://developers.kakao.com',
-              },
-            },
+            // {
+            //   title: '앱으로 보기',
+            //   link: {
+            //     mobileWebUrl: 'https://developers.kakao.com',
+            //     webUrl: 'https://developers.kakao.com',
+            //   },
+            // },
           ],
         });
 
@@ -1277,29 +1275,7 @@
         
 
         // 갤러리 이미지 배열
-        const galleryImages = [
-          './images/01.jpg',
-          './images/02.jpg',
-          './images/03.jpg',
-          './images/04.jpg',
-          './images/05.jpg',
-          './images/06.jpg',
-          './images/07.jpg',
-          './images/08.jpg',
-          './images/09.jpg',
-          './images/10.jpg',
-          './images/11.jpg',
-          './images/12.jpg',
-          './images/13.jpg',
-          './images/14.jpg',
-          './images/15.jpg',
-          './images/16.jpg',
-          './images/17.jpg',
-          './images/18.jpg',
-          './images/19.jpg',
-          './images/20.jpg',
-          './images/21.jpg',
-        ];
+        
 
         // 달력 생성
         createCalendar();
@@ -1517,9 +1493,11 @@
         $('.gallery-item').click(function () {
           const index = $(this).data('index');
 
+          console.log(index);
+
           // Swiper 인스턴스 생성 또는 업데이트
           if (window.gallerySwiper) {
-            window.gallerySwiper.slideTo(index, 0);
+            window.gallerySwiper.slideTo(index + 1, 0);
           } else {
             window.gallerySwiper = new Swiper('.swiper', {
               initialSlide: index,
@@ -1712,7 +1690,7 @@
 
             // 랜덤 크기 (15px ~ 30px)
             // const size = Math.floor(Math.random() * 15) + 15;
-            const size = Math.floor(Math.random() * 5) + 8;
+            const size = Math.floor(Math.random() * 4) + 7;
             petal.style.width = `${size}px`;
             petal.style.height = `${size}px`;
 
