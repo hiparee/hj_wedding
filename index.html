@@ -7,11 +7,11 @@
   <title>모바일 청첩장</title>
   <!-- 기본 오픈 그래프 태그 -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://hiparee.github.io/hj_wedding/">
+  <!-- <meta property="og:url" content="https://hiparee.github.io/hj_wedding/"> -->
   <meta property="og:title" content="종인 ♡ 현정 결혼합니다">
-  <meta property="og:image" content="./images/main.jpg">
-  <meta property="og:description" content="2025. 05. 11 SUN PM 1:00
-W웨딩 센텀사이언스파크 웨딩홀 1F 더라움홀">
+  <meta property="og:image" content="./images/07.jpg">
+  <meta property="og:description" content="2025-05-11 일요일 오후 1시
+모바일청첩장">
 
 
   <!-- 폰트어썸 아이콘 -->
@@ -216,7 +216,7 @@ W웨딩 센텀사이언스파크 웨딩홀 1F 더라움홀">
     }
 
     .invitation-text {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       line-height: 1.9;
       margin-bottom: 100px;
       color: #666;
@@ -1480,26 +1480,26 @@ W웨딩 센텀사이언스파크 웨딩홀 1F 더라움홀">
 
 
       // D-day 카운트다운 업데이트 함수
-      function updateCountdown() {
-        const coupleName = '종인♥현정';
+        function updateCountdown() {
+          const coupleName = '종인♥현정';
 
-        const weddingDate = new Date(targetYear, targetMonth - 1, targetDay, targetHour, targetMinute, 0);
-        const today = new Date();
+          const weddingDate = new Date(targetYear, targetMonth - 1, targetDay, targetHour, targetMinute, 0);
+          const today = new Date();
 
-        // 밀리초 단위 차이를 일 단위로 변환
-        const diffTime = weddingDate.getTime() - today.getTime();
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+          // 밀리초 단위 차이를 일 단위로 변환
+          const diffTime = weddingDate.getTime() - today.getTime();
+          const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
-        // D-day 텍스트 업데이트
-        const countdownText = document.getElementById('countdown-text');
-        if (diffDays > 0) {
-          countdownText.textContent = `${coupleName}의 결혼식이 ${diffDays}일 남았습니다`;
-        } else if (diffDays === 0) {
-          countdownText.textContent = `오늘이 ${coupleName}의 결혼식입니다`;
-        } else {
-          countdownText.textContent = `${coupleName}의 결혼식이 ${Math.abs(diffDays)}일 지났습니다`;
+          // D-day 텍스트 업데이트
+          const countdownText = document.getElementById('countdown-text');
+          if (diffDays > 0) {
+            countdownText.textContent = `${coupleName}의 결혼식이 ${diffDays}일 남았습니다`;
+          } else if (diffDays === 0) {
+            countdownText.textContent = `오늘이 ${coupleName}의 결혼식입니다`;
+          } else {
+            countdownText.textContent = `${coupleName}의 결혼식이 ${Math.abs(diffDays)}일 지났습니다`;
+          }
         }
-      }
 
       // 이벤트 리스너 설정 함수
       function setupEventListeners() {
