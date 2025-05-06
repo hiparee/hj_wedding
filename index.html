@@ -1458,26 +1458,31 @@
 
 
       // D-day 카운트다운 업데이트 함수
-        function updateCountdown() {
-          const coupleName = '종인♥현정';
+      function updateCountdown() {
+        const coupleName = '종인♥현정';
 
-          const weddingDate = new Date(targetYear, targetMonth - 1, targetDay, targetHour, targetMinute, 0);
-          const today = new Date();
-
-          // 밀리초 단위 차이를 일 단위로 변환
-          const diffTime = weddingDate.getTime() - today.getTime();
-          const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-          // D-day 텍스트 업데이트
-          const countdownText = document.getElementById('countdown-text');
-          if (diffDays > 0) {
-            countdownText.textContent = `${coupleName}의 결혼식이 ${diffDays}일 남았습니다`;
-          } else if (diffDays === 0) {
-            countdownText.textContent = `오늘이 ${coupleName}의 결혼식입니다`;
-          } else {
-            countdownText.textContent = `${coupleName}의 결혼식이 ${Math.abs(diffDays)}일 지났습니다`;
-          }
+        const weddingDate = new Date(targetYear, targetMonth - 1, targetDay, targetHour, targetMinute, 0);
+        const today = new Date();
+        
+        // 날짜만 비교하기 위해 시간을 초기화한 새로운 날짜 객체 생성
+        const todayDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        const weddingDateOnly = new Date(weddingDate.getFullYear(), weddingDate.getMonth(), weddingDate.getDate());
+        
+        // 날짜 간의 차이 계산 (밀리초)
+        const diffTime = weddingDateOnly.getTime() - todayDate.getTime();
+        // 일 단위로 변환
+        const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+        
+        // D-day 텍스트 업데이트
+        const countdownText = document.getElementById('countdown-text');
+        if (diffDays > 0) {
+          countdownText.textContent = `${coupleName}의 결혼식이 ${diffDays}일 남았습니다`;
+        } else if (diffDays === 0) {
+          countdownText.textContent = `오늘이 ${coupleName}의 결혼식입니다`;
+        } else {
+          countdownText.textContent = `${coupleName}의 결혼식이 ${Math.abs(diffDays)}일 지났습니다`;
         }
+      }
 
       // 이벤트 리스너 설정 함수
       function setupEventListeners() {
